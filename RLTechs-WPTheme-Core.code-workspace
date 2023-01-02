@@ -4,5 +4,15 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"auto-close-tag.fullMode": true,
+		"auto-close-tag.activationOnLanguage": [
+			"*"
+		]
+	},
+	"extensions": {
+		"recommendations": [
+			"formulahendry.auto-close-tag"
+		]
+	}
 }
