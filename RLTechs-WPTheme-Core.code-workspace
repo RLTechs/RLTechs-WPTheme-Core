@@ -38,7 +38,10 @@
 		"npm-intellisense.recursivePackageJsonLookup": true,
 		"npm-intellisense.importES6": true,
 		"searchwpdocs.openResultsInTab": true,
-		"searchwpdocs.showOnSideTab": false
+		"searchwpdocs.showOnSideTab": false,
+		"cSpell.words": [
+			"gulpfile"
+		]
 	},
 	"extensions": {
 		"recommendations": [
