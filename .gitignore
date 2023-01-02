@@ -13,6 +13,11 @@
 
 # Project Folders and Files
 # Folders...
+!/build
+!/dist
+!/docs
+!/gulp
+!/src
 
 # Files...
 !LICENSE
@@ -21,5 +26,6 @@
 
 # Addtional Items That Must Be Ignored...
 # Specific SubFolders, Files, Etc.
+/build/**/**
 
 # End File .gitignore
