@@ -1,3 +1,4 @@
+// cSpell:disable
 {
 	"folders": [
 		{
@@ -12,11 +13,48 @@
 		"git.branchProtection": [
 			"release"
 		],
-		"git.postCommitCommand": "push"
+		"git.postCommitCommand": "push",
+		"auto-rename-tag.activationOnLanguage": [		
+			"*"
+		],
+		"githubPullRequests.useReviewMode": {
+			"merged": true,
+			"closed": true
+		},
+		"githubPullRequests.assignCreated": "$(user)",
+		"githubPullRequests.notifications": "off",
+		"git-graph.date.type": "Commit Date",
+		"markdown-preview-github-styles.colorTheme": "auto",
+		"VSCodeCounter.exclude": [
+			"**/.gitignore",
+			"**/.vscode/**",
+			"**/node_modules/**",
+			"**/.gitkeep",
+			"**/.git/**",
+			"**/build/**",
+			"**/dist/**",
+			"**/release/**"
+		],
+		"npm-intellisense.recursivePackageJsonLookup": true,
+		"npm-intellisense.importES6": true,
+		"searchwpdocs.openResultsInTab": true,
+		"searchwpdocs.showOnSideTab": false
 	},
 	"extensions": {
 		"recommendations": [
-			"formulahendry.auto-close-tag"
+			"formulahendry.auto-close-tag",
+			"formulahendry.auto-rename-tag",
+			"abromeit.add-hint-link-to-manual",
+			"github.vscode-pull-request-github",
+			"quentinguidee.gitignore-ultimate",
+			"mhutchie.git-graph",
+			"vizzuhq.code-viz-stat",
+			"bierner.markdown-preview-github-styles",
+			"uctakeoff.vscode-counter",
+			"christian-kohler.npm-intellisense",
+			"natqe.reload",
+			"yogensia.searchwpdocs",
+			"streetsidesoftware.code-spell-checker"
 		]
 	}
 }
