@@ -40,7 +40,10 @@
 		"searchwpdocs.openResultsInTab": true,
 		"searchwpdocs.showOnSideTab": false,
 		"cSpell.words": [
-			"gulpfile"
+			"fontawesome",
+			"fortawesome",
+			"gulpfile",
+			"popperjs"
 		]
 	},
 	"extensions": {
