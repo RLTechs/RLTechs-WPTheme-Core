@@ -10,6 +10,7 @@
 		"auto-close-tag.activationOnLanguage": [
 			"*"
 		],
+		"css.format.spaceAroundSelectorSeparator": true,
 		"git.branchProtection": [
 			"release"
 		],
@@ -39,6 +40,9 @@
 		"npm-intellisense.importES6": true,
 		"searchwpdocs.openResultsInTab": true,
 		"searchwpdocs.showOnSideTab": false,
+		"terminal.integrated.fontSize": 12,
+		"editor.fontSize": 14,
+		"window.zoomLevel": 1,
 		"cSpell.words": [
 			"fontawesome",
 			"fortawesome",
