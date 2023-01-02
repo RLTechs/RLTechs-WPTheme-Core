@@ -21,7 +21,9 @@
 !/test
 
 # Files...
+!gulpfile.babel.js
 !LICENSE
+!package-lock.json
 !package.json
 !README
 !RLTechs-WPTheme-Core.code-workspace
