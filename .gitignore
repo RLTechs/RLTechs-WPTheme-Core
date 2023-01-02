@@ -18,9 +18,11 @@
 !/docs
 !/gulp
 !/src
+!/test
 
 # Files...
 !LICENSE
+!package.json
 !README
 !RLTechs-WPTheme-Core.code-workspace
 
