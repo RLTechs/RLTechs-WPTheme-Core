@@ -44,7 +44,20 @@
     "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-include": "^2.4.1",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-plumber": "^1.2.1",
+    "gulp-potomo": "^1.1.0",
+    "gulp-print": "^5.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wp-pot": "^2.5.0",
+    "gulp-zip": "^5.1.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
