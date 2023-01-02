@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/RLTechs/RLTechs-WPTheme-Core#readme",
   "scripts": {
-    "install": "",
+    "start": "",
     "setup": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
