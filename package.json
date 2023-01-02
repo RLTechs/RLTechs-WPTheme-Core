@@ -1,0 +1,41 @@
+{
+  "name": "rlt-theme-core",
+  "version": "0.0.1a",
+  "description": "A core Wordpress theme for use in themes and client site development.",
+  "keywords": [
+    "RL Technologies", "RLTechs", "Wordpress", "Bootstrap", "Font Awesome"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "RL Technologies Code Team",
+    "email": "codeteam@rltechs.com",
+    "url": "https://codeteam.rltechsllc.com/"
+  },
+  "contributors": [
+    {
+      "name": "Erik Roth",
+      "email": "erikroth@rltechs.com",
+      "url": "https://github.com/Erik-Roth"
+    }
+  ],
+  "main": "gulpfile.babel.js",
+  "directories": {
+    "test": "test",
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RLTechs/RLTechs-WPTheme-Core.git"
+  }, 
+  "bugs": {
+    "url": "https://github.com/RLTechs/RLTechs-WPTheme-Core/issues"
+  },
+  "homepage": "https://github.com/RLTechs/RLTechs-WPTheme-Core#readme",
+  "scripts": {
+    "install": "",
+    "setup": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
