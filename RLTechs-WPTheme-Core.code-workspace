@@ -47,7 +47,9 @@
 			"fontawesome",
 			"fortawesome",
 			"gulpfile",
-			"popperjs"
+			"popperjs",
+			"potomo",
+			"stylelint"
 		]
 	},
 	"extensions": {
