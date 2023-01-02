@@ -26,5 +26,6 @@
 
 # Addtional Items That Must Be Ignored...
 # Specific SubFolders, Files, Etc.
+/build/**/**
 
 # End File .gitignore
