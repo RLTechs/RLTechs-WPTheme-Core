@@ -1,0 +1,31 @@
+# Begin File .gitignore 
+# Ignore Everything
+/*
+# Except The Following...
+
+# dot (.) Folders and Files
+# Folders...
+!/.github/
+
+# Files...
+!.gitignore
+!.gitkeep
+
+# Project Folders and Files
+# Folders...
+!/build
+!/dist
+!/docs
+!/gulp
+!/src
+
+# Files...
+!LICENSE
+!README
+!RLTechs-WPTheme-Core.code-workspace
+
+# Addtional Items That Must Be Ignored...
+# Specific SubFolders, Files, Etc.
+/build/**/**
+
+# End File .gitignore
