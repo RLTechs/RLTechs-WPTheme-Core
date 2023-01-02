@@ -13,6 +13,11 @@
 
 # Project Folders and Files
 # Folders...
+!/build
+!/dist
+!/docs
+!/gulp
+!/src
 
 # Files...
 !LICENSE
