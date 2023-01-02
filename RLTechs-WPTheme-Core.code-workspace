@@ -8,7 +8,11 @@
 		"auto-close-tag.fullMode": true,
 		"auto-close-tag.activationOnLanguage": [
 			"*"
-		]
+		],
+		"git.branchProtection": [
+			"release"
+		],
+		"git.postCommitCommand": "push"
 	},
 	"extensions": {
 		"recommendations": [
