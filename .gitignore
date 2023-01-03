@@ -19,7 +19,7 @@
 !/docs
 !/gulp
 !/src
-!/test
+!/tests
 
 # Files...
 !gulpfile.babel.js
