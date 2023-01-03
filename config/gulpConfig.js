@@ -12,7 +12,6 @@
 'use strict';
 
 /** External Dependencies */
-export const gPlugins = require('gulp-load-plugins')();
 
 /** Internal Dependencies */
 import path from 'path';
