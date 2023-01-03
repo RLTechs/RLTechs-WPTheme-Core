@@ -36,8 +36,10 @@
   },
   "homepage": "https://github.com/RLTechs/RLTechs-WPTheme-Core#readme",
   "scripts": {
-    "start": "",
+    "build": "",
+    "package": "",
     "setup": "",
+    "tasks": "gulp --tasks",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -48,6 +50,7 @@
     "@wordpress/scripts": "^25.1.0",
     "@wordpress/stylelint-config": "^21.7.0",
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
     "del": "^6.1.1",
     "eslint": "^8.31.0",
     "eslint-config-gulp": "^5.0.1",
