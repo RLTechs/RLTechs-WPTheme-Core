@@ -1,7 +1,7 @@
 {
-  "name": "rlt-theme-core",
+  "name": "@rltechs/themecore",
   "version": "0.0.1a",
-  "description": "A core Wordpress theme for use in themes and client site development.",
+  "description": "A core Wordpress theme framework for use in themes and client site development.",
   "keywords": [
     "RL Technologies",
     "RLTechs",
@@ -36,8 +36,10 @@
   },
   "homepage": "https://github.com/RLTechs/RLTechs-WPTheme-Core#readme",
   "scripts": {
-    "start": "",
-    "setup": "",
+    "build": "",
+    "package": "cross-env NODE_ENV=production gulp php",
+    "setup": "npm install",
+    "tasks": "gulp --tasks",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -47,7 +49,9 @@
     "@wordpress/eslint-plugin": "^13.8.0",
     "@wordpress/scripts": "^25.1.0",
     "@wordpress/stylelint-config": "^21.7.0",
+    "ansi-colors": "^4.1.3",
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
     "del": "^6.1.1",
     "eslint": "^8.31.0",
     "eslint-config-gulp": "^5.0.1",
@@ -55,13 +59,14 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
+    "fancy-log": "^2.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-changed": "^4.0.3",
     "gulp-eslint": "^6.0.0",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^8.0.0",
     "gulp-include": "^2.4.1",
-    "gulp-load-plugins": "^2.0.8",
     "gulp-newer": "^1.4.0",
     "gulp-phpcs": "^3.1.0",
     "gulp-plumber": "^1.2.1",

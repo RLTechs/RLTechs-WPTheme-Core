@@ -14,11 +14,12 @@
 # Project Folders and Files
 # Folders...
 !/build
+!/config
 !/dist
 !/docs
 !/gulp
 !/src
-!/test
+!/tests
 
 # Files...
 !gulpfile.babel.js
