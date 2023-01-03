@@ -20,6 +20,7 @@ import { parallel, series } from 'gulp';
 
 /** Internal Dependencies */
 import { php } from './gulp/php';
+import { wpreq } from './gulp/wpreq';
 
 /** Build Gulp Tasks */
 
@@ -31,6 +32,6 @@ import { php } from './gulp/php';
 //export default gDev;
 
 /** Export All Imports as Tasks */
-export { php };
+export { wpreq, php };
 
 /** End of File */
