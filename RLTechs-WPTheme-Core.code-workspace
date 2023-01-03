@@ -52,7 +52,8 @@
 			"potomo",
 			"rltechs",
 			"stylelint",
-			"themecore"
+			"themecore",
+			"wpreq"
 		]
 	},
 	"extensions": {
