@@ -1,7 +1,7 @@
 {
-  "name": "rlt-theme-core",
+  "name": "@rltechs/themecore",
   "version": "0.0.1a",
-  "description": "A core Wordpress theme for use in themes and client site development.",
+  "description": "A core Wordpress theme framework for use in themes and client site development.",
   "keywords": [
     "RL Technologies",
     "RLTechs",
@@ -37,8 +37,8 @@
   "homepage": "https://github.com/RLTechs/RLTechs-WPTheme-Core#readme",
   "scripts": {
     "build": "",
-    "package": "",
-    "setup": "",
+    "package": "cross-env NODE_ENV=production gulp php",
+    "setup": "npm install",
     "tasks": "gulp --tasks",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
