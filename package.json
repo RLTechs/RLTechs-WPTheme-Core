@@ -112,6 +112,6 @@
     }
   },
   "stylelint": {
-    "extends": "stylelint-config-wordpress"
+    "extends": "@wordpress/stylelint-config"
   }
 }
