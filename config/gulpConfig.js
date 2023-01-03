@@ -46,6 +46,10 @@ export const paths = {
 		dev: `${devPath}/${theme.slug}`,
 		dist: `${distPath}/${theme.slug}`,
 	},
+	wpr: {
+		src: `${srcPath}/wp-required/*.*`,
+		dev: `${devPath}/${theme.slug}`,
+		dist: `${distPath}/${theme.slug}`,
+	},
 };
-
 /** EOF */
