@@ -30,6 +30,13 @@ import print from 'gulp-print';
  * 'Build' directory to be server on the
  * localhost dev server
  */
+function counter() {
+	let count = 0;
+	setInterval(() => {
+		count++;
+		console.log(count);
+	}, 1000);
+}
 
 function bsScss() {
 	let nSrc = 0,
@@ -321,6 +328,8 @@ function popJs() {
 const vend = g.series(bsScss, bsJs, bsIco, bsIcoScss, faScss, faIco, popJs);
 
 function wipeVend() {
+	// TODO add console messages for each wipe section
+	// along with progress indicators?
 	const wipeVendFiles = [
 		`${sysPaths.srcPath}/scss/bootstrap`,
 		`${sysPaths.srcPath}/js/library/bootstrap`,
