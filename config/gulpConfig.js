@@ -48,6 +48,16 @@ export { sysPaths };
 /** Export Needed Paths */
 export const paths = {
 	/** PHP Files */
+	css: {
+		src: [
+			`${srcPath}/scss/*.scss`,
+			`!${srcPath}/scss/.*`,
+			`!${srcPath}/scss/partials`,
+			`!${srcPath}/scss/**/_*.scss`,
+		],
+		dev: `${devPath}/${theme.slug}/assets/css`,
+		dist: `${distPath}/${theme.slug}/assets/css`,
+	},
 	fnt: {
 		src: `${srcPath}/fonts/**`,
 		dev: `${devPath}/${theme.slug}/assets/fonts`,
