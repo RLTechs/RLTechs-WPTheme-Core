@@ -23,6 +23,9 @@ export const ifProd = process.env.NODE_ENV === 'production';
 /** Define and Export Root Path */
 export const rootPath = process.cwd();
 
+/** Define and Export Node Path */
+export const nPath = `${rootPath}/node_modules`
+
 /** Define and Export Gulp Path */
 export const gPath = `${rootPath}/gulp`;
 
@@ -45,6 +48,23 @@ export const paths = {
 		src: `${srcPath}/php/**`,
 		dev: `${devPath}/${theme.slug}`,
 		dist: `${distPath}/${theme.slug}`,
+	},
+	vend: {
+		bs: {
+			src: `${nPath}/bootstrap/scss/**`,
+			dev: `${srcPath}/scss/bootstrap`,
+		},
+		bsi: {
+			src: `${nPath}/bootstrap-icons/font/fonts/bootstrap-icons.*`,
+			dev: `${srcPath}`,
+		},
+		bsj: {
+			src: `${nPath}/bootstrap/dist/js`
+		},
+		fa: {
+			src: `${nPath}/@fortawesome/fontawesome-free`,
+			dev: `${srcPath}`,
+		},
 	},
 	wpr: {
 		src: `${srcPath}/wp-required/*.*`,
