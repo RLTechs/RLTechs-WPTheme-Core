@@ -53,16 +53,7 @@ export const paths = {
 		dev: `${devPath}/${theme.slug}`,
 		dist: `${distPath}/${theme.slug}`,
 	},
-	vend: {
-		
-		fa: {
-			src: `${nPath}/@fortawesome/fontawesome-free`,
-			dev: `${srcPath}`,
-		},
-		popr: {
-			//
-		}
-	},
+
 	wpr: {
 		src: `${srcPath}/wp-required/*.*`,
 		dev: `${devPath}/${theme.slug}`,
