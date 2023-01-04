@@ -227,33 +227,4 @@ function wipeVend() {
 
 export { vend, wipeVend };
 
-function xTemp() {
-	return g
-		.src(paths.vend.src)
-		.pipe(plumber(), log(c.bold(c.cyan('Vendor Source Files Copying...'))))
-		.on('data', function () {
-			nSrc += 1;
-		})
-		.pipe(changed(paths.vend.dev))
-		.pipe(g.dest(paths.vend.dev))
-		.on('data', function () {
-			nDes += 1;
-		})
-		.on('finish', function () {
-			log(c.cyan(c.bold('Vendor Source Files Results...')));
-			log(
-				c.cyan('Out of'),
-				c.bold(c.red.italic(nSrc)),
-				c.cyan('Files Available...')
-			);
-			log(
-				c.cyan('...'),
-				c.bold(c.red.italic(nDes)),
-				c.cyan(
-					'Newer files were found and written to the source directory.'
-				)
-			);
-		})
-		.pipe(print((filepath) => `${filepath}`))
-		.pipe(plumber.stop());
-}
+/** EOF */
