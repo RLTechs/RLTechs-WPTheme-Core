@@ -100,9 +100,13 @@ function vend(done) {
 
 	bsScss();
 	done();
+};
+
+function wipeVend() {
+	//
 }
 
-export { vend };
+export { vend, wipeVend };
 
 function xTemp(){
 	return g

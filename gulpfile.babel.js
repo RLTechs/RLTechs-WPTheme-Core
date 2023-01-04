@@ -20,7 +20,7 @@ import { parallel, series } from 'gulp';
 
 /** Internal Dependencies */
 import { php } from './gulp/php';
-import { vend } from './gulp/vendors';
+import { vend, wipeVend } from './gulp/vendors';
 import { wpreq } from './gulp/wpreq';
 
 /** Build Gulp Tasks */
@@ -33,6 +33,6 @@ import { wpreq } from './gulp/wpreq';
 //export default gDev;
 
 /** Export All Imports as Tasks */
-export { vend, wpreq, php };
+export { vend, wipeVend, wpreq, php };
 
 /** End of File */
