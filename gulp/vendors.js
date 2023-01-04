@@ -216,8 +216,9 @@ function vend(done) {
 
 	//bsScss();
 	//bsJs();
-	bsIco();
+	//bsIco();
 	//bsIcoScss();
+
 	done();
 }
 
