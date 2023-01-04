@@ -19,6 +19,7 @@ import { paths, ifProd } from '../config/gulpConfig';
 import log from 'fancy-log';
 import c from 'ansi-colors';
 import changed from 'gulp-changed';
+import del from 'del';
 import plumber from 'gulp-plumber';
 import print from 'gulp-print';
 
