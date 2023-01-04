@@ -53,12 +53,26 @@ export const paths = {
 		dev: `${devPath}/${theme.slug}/assets/fonts`,
 		dist: `${distPath}/${theme.slug}/assets/fonts`,
 	},
+	ico: [
+		src: `${srcPath}/icons/**`,
+		dev: `${devPath}/${theme.slug}/assets/icons`,
+		dist: `${distPath}/${theme.slug}/assets/icons`,
+	],
+	img: {
+		src: `${srcPath}/images/**`,
+		dev: `${devPath}/${theme.slug}/assets/images`,
+		dist: `${distPath}/${theme.slug}/assets/images`,
+	},
 	php: {
 		src: `${srcPath}/php/**`,
 		dev: `${devPath}/${theme.slug}`,
 		dist: `${distPath}/${theme.slug}`,
 	},
-
+	svg: {
+		src: `${srcPath}/svg/**`,
+		dev: `${devPath}/${theme.slug}/assets/svg`,
+		dist: `${distPath}/${theme.slug}/assets/svg`,
+	},
 	wpr: {
 		src: `${srcPath}/wp-required/*.*`,
 		dev: `${devPath}/${theme.slug}`,
