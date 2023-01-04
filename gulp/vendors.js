@@ -116,6 +116,49 @@ function vend(done) {
 			.pipe(plumber.stop());
 	}
 
+	function bsIco() {
+		let nSrc = 0,
+			nDes = 0;
+
+		return g
+			.src(`${sysPaths.nPath}/bootstrap-icons/font/fonts/*.*`)
+			.pipe(
+				plumber(),
+				log(
+					c.bold(
+						c.cyan(
+							'Bootstrap Icons Font Files Copying To SRC Directory...'
+						)
+					)
+				)
+			)
+			.on('data', function () {
+				nSrc += 1;
+			})
+			.pipe(changed(`${sysPaths.srcPath}/fonts`))
+			.pipe(g.dest(`${sysPaths.srcPath}/fonts`))
+			.on('data', function () {
+				nDes += 1;
+			})
+			.on('finish', function () {
+				log(c.cyan(c.bold('Bootstrap Icons Font Files Results...')));
+				log(
+					c.cyan('Out of'),
+					c.bold(c.red.italic(nSrc)),
+					c.cyan('Files Available...')
+				);
+				log(
+					c.cyan('...'),
+					c.bold(c.red.italic(nDes)),
+					c.cyan(
+						'Newer files were found and written to the src directory.'
+					)
+				);
+			})
+			.pipe(print((filepath) => `${filepath}`))
+			.pipe(plumber.stop());
+	}
+
 	function bsIcoScss() {
 		let nSrc = 0,
 			nDes = 0;
@@ -159,10 +202,6 @@ function vend(done) {
 			.pipe(plumber.stop());
 	}
 
-	function bsIco() {
-		//
-	}
-
 	function fa() {
 		//
 	}
@@ -177,7 +216,8 @@ function vend(done) {
 
 	//bsScss();
 	//bsJs();
-	bsIcoScss();
+	bsIco();
+	//bsIcoScss();
 	done();
 }
 
