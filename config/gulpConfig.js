@@ -20,26 +20,30 @@ import { theme } from './themeConfig';
 /** Is This A Development or Production Build */
 export const ifProd = process.env.NODE_ENV === 'production';
 
-/** Define and Export Root Path */
-export const rootPath = process.cwd();
+/** Define Root Path */
+const rootPath = process.cwd();
 
-/** Define and Export Node Path */
-export const nPath = `${rootPath}/node_modules`
+/** Define Node Path */
+const nPath = `${rootPath}/node_modules`
 
-/** Define and Export Gulp Path */
-export const gPath = `${rootPath}/gulp`;
+/** Define Gulp Path */
+const gPath = `${rootPath}/gulp`;
 
-/** Define and Export Test Path */
-export const tPath = `${rootPath}/tests`;
+/** Define Test Path */
+const tPath = `${rootPath}/tests`;
 
-/** Define and Export Source Path */
-export const srcPath = `${rootPath}/src`;
+/** Define Source Path */
+const srcPath = `${rootPath}/src`;
 
-/** Define and Export Development Path */
-export const devPath = `${rootPath}/build`;
+/** Define Development Path */
+const devPath = `${rootPath}/build`;
 
-/** Define and Export Distribution Path */
-export const distPath = `${rootPath}/dist`;
+/** Define Distribution Path */
+const distPath = `${rootPath}/dist`;
+
+/** Export System Paths Above For Global Use */
+const sysPaths = { rootPath, nPath, gPath, tPath, srcPath, devPath, distPath };
+export { sysPaths };
 
 /** Export Needed Paths */
 export const paths = {
@@ -50,21 +54,14 @@ export const paths = {
 		dist: `${distPath}/${theme.slug}`,
 	},
 	vend: {
-		bs: {
-			src: `${nPath}/bootstrap/scss/**`,
-			dev: `${srcPath}/scss/bootstrap`,
-		},
-		bsi: {
-			src: `${nPath}/bootstrap-icons/font/fonts/bootstrap-icons.*`,
-			dev: `${srcPath}`,
-		},
-		bsj: {
-			src: `${nPath}/bootstrap/dist/js`
-		},
+		
 		fa: {
 			src: `${nPath}/@fortawesome/fontawesome-free`,
 			dev: `${srcPath}`,
 		},
+		popr: {
+			//
+		}
 	},
 	wpr: {
 		src: `${srcPath}/wp-required/*.*`,
