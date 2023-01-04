@@ -202,12 +202,92 @@ function vend(done) {
 			.pipe(plumber.stop());
 	}
 
-	function fa() {
-		//
+	function faScss() {
+		let nSrc = 0,
+			nDes = 0;
+
+		return g
+			.src(`${sysPaths.nPath}/@fortawesome/fontawesome-free/scss/**`)
+			.pipe(
+				plumber(),
+				log(
+					c.bold(
+						c.cyan(
+							'Fontawesome SCSS Files Copying To SRC Directory...'
+						)
+					)
+				)
+			)
+			.on('data', function () {
+				nSrc += 1;
+			})
+			.pipe(changed(`${sysPaths.srcPath}/scss/fontawesome`))
+			.pipe(g.dest(`${sysPaths.srcPath}/scss/fontawesome`))
+			.on('data', function () {
+				nDes += 1;
+			})
+			.on('finish', function () {
+				log(c.cyan(c.bold('Fontawesome SCSS Files Results...')));
+				log(
+					c.cyan('Out of'),
+					c.bold(c.red.italic(nSrc)),
+					c.cyan('Files Available...')
+				);
+				log(
+					c.cyan('...'),
+					c.bold(c.red.italic(nDes)),
+					c.cyan(
+						'Newer files were found and written to the src directory.'
+					)
+				);
+			})
+			.pipe(print((filepath) => `${filepath}`))
+			.pipe(plumber.stop());
 	}
 
-	function faScss() {
-		//
+	function faIco() {
+		let nSrc = 0,
+			nDes = 0;
+
+		return g
+			.src(
+				`${sysPaths.nPath}/@fortawesome/fontawesome-free/webfonts/*.{woff,woff2}`
+			)
+			.pipe(
+				plumber(),
+				log(
+					c.bold(
+						c.cyan(
+							'Fontawesome Font Files Copying To SRC Directory...'
+						)
+					)
+				)
+			)
+			.on('data', function () {
+				nSrc += 1;
+			})
+			.pipe(changed(`${sysPaths.srcPath}/fonts`))
+			.pipe(g.dest(`${sysPaths.srcPath}/fonts`))
+			.on('data', function () {
+				nDes += 1;
+			})
+			.on('finish', function () {
+				log(c.cyan(c.bold('Fontawesome Font Files Results...')));
+				log(
+					c.cyan('Out of'),
+					c.bold(c.red.italic(nSrc)),
+					c.cyan('Files Available...')
+				);
+				log(
+					c.cyan('...'),
+					c.bold(c.red.italic(nDes)),
+					c.cyan(
+						'Newer files were found and written to the src directory.'
+					)
+				);
+			})
+			.pipe(print((filepath) => `${filepath}`))
+			.pipe(plumber.stop());
 	}
 
 	function popJs() {
@@ -218,6 +298,8 @@ function vend(done) {
 	//bsJs();
 	//bsIco();
 	//bsIcoScss();
+	//faScss();
+	faIco();
 
 	done();
 }
