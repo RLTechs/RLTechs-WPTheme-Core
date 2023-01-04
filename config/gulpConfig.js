@@ -72,4 +72,5 @@ export const paths = {
 		dist: `${distPath}/${theme.slug}`,
 	},
 };
+
 /** EOF */
