@@ -15,7 +15,7 @@
 import * as g from 'gulp';
 
 /** Internal Dependencies */
-import { paths, ifProd } from '../config/gulpConfig';
+import { paths, sysPaths, ifProd } from '../config/gulpConfig';
 import log from 'fancy-log';
 import c from 'ansi-colors';
 import changed from 'gulp-changed';
@@ -37,7 +37,7 @@ function vend(done) {
 			nDes = 0;
 
 		return g
-			.src(paths.vend.bs.src)
+			.src(`${sysPaths.nPath}/bootstrap/scss/**`)
 			.pipe(
 				plumber(),
 				log(
@@ -51,8 +51,8 @@ function vend(done) {
 			.on('data', function () {
 				nSrc += 1;
 			})
-			.pipe(changed(paths.vend.bs.dev))
-			.pipe(g.dest(paths.vend.bs.dev))
+			.pipe(changed(`${sysPaths.srcPath}/scss/bootstrap`))
+			.pipe(g.dest(`${sysPaths.srcPath}/scss/bootstrap`))
 			.on('data', function () {
 				nDes += 1;
 			})
@@ -76,14 +76,90 @@ function vend(done) {
 	}
 
 	function bsJs() {
-		//
-	}
+		let nSrc = 0,
+			nDes = 0;
 
-	function bsIco() {
-		//
+		return g
+			.src(`${sysPaths.nPath}/bootstrap/dist/js/bootstrap.{js,js.map}`)
+			.pipe(
+				plumber(),
+				log(
+					c.bold(
+						c.cyan('Bootstrap JS Files Copying To SRC Directory...')
+					)
+				)
+			)
+			.on('data', function () {
+				nSrc += 1;
+			})
+			.pipe(changed(`${sysPaths.srcPath}/js/library`))
+			.pipe(g.dest(`${sysPaths.srcPath}/js/library`))
+			.on('data', function () {
+				nDes += 1;
+			})
+			.on('finish', function () {
+				log(c.cyan(c.bold('Bootstrap JS Files Results...')));
+				log(
+					c.cyan('Out of'),
+					c.bold(c.red.italic(nSrc)),
+					c.cyan('Files Available...')
+				);
+				log(
+					c.cyan('...'),
+					c.bold(c.red.italic(nDes)),
+					c.cyan(
+						'Newer files were found and written to the src directory.'
+					)
+				);
+			})
+			.pipe(print((filepath) => `${filepath}`))
+			.pipe(plumber.stop());
 	}
 
 	function bsIcoScss() {
+		let nSrc = 0,
+			nDes = 0;
+
+		return g
+			.src(`${sysPaths.nPath}/bootstrap-icons/font/*.scss`)
+			.pipe(
+				plumber(),
+				log(
+					c.bold(
+						c.cyan(
+							'Bootstrap Icons SCSS Files Copying To SRC Directory...'
+						)
+					)
+				)
+			)
+			.on('data', function () {
+				nSrc += 1;
+			})
+			.pipe(changed(`${sysPaths.srcPath}/scss/bootstrap-icons`))
+			.pipe(g.dest(`${sysPaths.srcPath}/scss/bootstrap-icons`))
+			.on('data', function () {
+				nDes += 1;
+			})
+			.on('finish', function () {
+				log(c.cyan(c.bold('Bootstrap Icons SCSS Files Results...')));
+				log(
+					c.cyan('Out of'),
+					c.bold(c.red.italic(nSrc)),
+					c.cyan('Files Available...')
+				);
+				log(
+					c.cyan('...'),
+					c.bold(c.red.italic(nDes)),
+					c.cyan(
+						'Newer files were found and written to the src directory.'
+					)
+				);
+			})
+			.pipe(print((filepath) => `${filepath}`))
+			.pipe(plumber.stop());
+	}
+
+	function bsIco() {
 		//
 	}
 
@@ -99,9 +175,11 @@ function vend(done) {
 		//
 	}
 
-	bsScss();
+	//bsScss();
+	//bsJs();
+	bsIcoScss();
 	done();
-};
+}
 
 function wipeVend() {
 	//
@@ -109,7 +187,7 @@ function wipeVend() {
 
 export { vend, wipeVend };
 
-function xTemp(){
+function xTemp() {
 	return g
 		.src(paths.vend.src)
 		.pipe(plumber(), log(c.bold(c.cyan('Vendor Source Files Copying...'))))
