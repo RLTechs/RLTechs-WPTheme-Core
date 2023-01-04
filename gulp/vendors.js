@@ -92,8 +92,8 @@ function vend(done) {
 			.on('data', function () {
 				nSrc += 1;
 			})
-			.pipe(changed(`${sysPaths.srcPath}/js/library`))
-			.pipe(g.dest(`${sysPaths.srcPath}/js/library`))
+			.pipe(changed(`${sysPaths.srcPath}/js/library/bootstrap`))
+			.pipe(g.dest(`${sysPaths.srcPath}/js/library/bootstrap`))
 			.on('data', function () {
 				nDes += 1;
 			})
@@ -291,7 +291,42 @@ function vend(done) {
 	}
 
 	function popJs() {
-		//
+		let nSrc = 0,
+			nDes = 0;
+
+		return g
+			.src(`${sysPaths.nPath}/@popperjs/core/dist/esm/**`)
+			.pipe(
+				plumber(),
+				log(
+					c.bold(c.cyan('PopperJS Files Copying To SRC Directory...'))
+				)
+			)
+			.on('data', function () {
+				nSrc += 1;
+			})
+			.pipe(changed(`${sysPaths.srcPath}/js/library/popper`))
+			.pipe(g.dest(`${sysPaths.srcPath}/js/library/popper`))
+			.on('data', function () {
+				nDes += 1;
+			})
+			.on('finish', function () {
+				log(c.cyan(c.bold('PopperJS Files Results...')));
+				log(
+					c.cyan('Out of'),
+					c.bold(c.red.italic(nSrc)),
+					c.cyan('Files Available...')
+				);
+				log(
+					c.cyan('...'),
+					c.bold(c.red.italic(nDes)),
+					c.cyan(
+						'Newer files were found and written to the src directory.'
+					)
+				);
+			})
+			.pipe(print((filepath) => `${filepath}`))
+			.pipe(plumber.stop());
 	}
 
 	//bsScss();
@@ -299,8 +334,8 @@ function vend(done) {
 	//bsIco();
 	//bsIcoScss();
 	//faScss();
-	faIco();
-
+	//faIco();
+	popJs();
 	done();
 }
 
