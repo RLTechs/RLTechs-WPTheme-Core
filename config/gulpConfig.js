@@ -53,15 +53,15 @@ export const paths = {
 		dev: `${devPath}/${theme.slug}/assets/fonts`,
 		dist: `${distPath}/${theme.slug}/assets/fonts`,
 	},
-	ico: [
+	ico: {
 		src: `${srcPath}/icons/**`,
-		dev: `${devPath}/${theme.slug}/assets/icons`,
-		dist: `${distPath}/${theme.slug}/assets/icons`,
-	],
+		dev: `${devPath}/${theme.slug}/assets/ico`,
+		dist: `${distPath}/${theme.slug}/assets/ico`,
+	},
 	img: {
 		src: `${srcPath}/images/**`,
-		dev: `${devPath}/${theme.slug}/assets/images`,
-		dist: `${distPath}/${theme.slug}/assets/images`,
+		dev: `${devPath}/${theme.slug}/assets/img`,
+		dist: `${distPath}/${theme.slug}/assets/img`,
 	},
 	php: {
 		src: `${srcPath}/php/**`,
@@ -69,7 +69,7 @@ export const paths = {
 		dist: `${distPath}/${theme.slug}`,
 	},
 	svg: {
-		src: `${srcPath}/svg/**`,
+		src: `${srcPath}/svgs/**`,
 		dev: `${devPath}/${theme.slug}/assets/svg`,
 		dist: `${distPath}/${theme.slug}/assets/svg`,
 	},
