@@ -52,7 +52,7 @@ export const paths = {
 		src: `${srcPath}/fonts/**`,
 		dev: `${devPath}/${theme.slug}/assets/fonts`,
 		dist: `${distPath}/${theme.slug}/assets/fonts`,
-	}
+	},
 	php: {
 		src: `${srcPath}/php/**`,
 		dev: `${devPath}/${theme.slug}`,
