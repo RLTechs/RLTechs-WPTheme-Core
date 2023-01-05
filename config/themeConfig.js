@@ -29,4 +29,16 @@ export const theme = {
 	slug: 'themecore', //
 };
 
+/** BrowserSync Info */
+export const bsConf = {
+	proxy: 'http://rltechswptemplate.local/',
+	open: true,
+	notify: true,
+	liveReload: true,
+	reloadDelay: 150,
+	https: false
+	//watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir']
+	//browser: [ 'safari', 'microsoft edge' ],
+}
+
 /** EOF */
