@@ -31,12 +31,12 @@ export const theme = {
 
 /** BrowserSync Info */
 export const bsConf = {
-	proxy: 'http://rltechswptemplate.local/',
+	proxy: 'http://themecore.local/',
 	open: true,
 	notify: true,
 	liveReload: true,
 	reloadDelay: 150,
-	https: false
+	https: false,
 	//watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir']
 	//browser: [ 'safari', 'microsoft edge' ],
 }
