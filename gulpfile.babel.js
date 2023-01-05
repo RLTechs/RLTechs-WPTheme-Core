@@ -22,6 +22,7 @@ import { parallel, series } from 'gulp';
 import { css } from './gulp/styles';
 import { graphics } from './gulp/graphics';
 import { fonts } from './gulp/fonts';
+import { jss } from './gulp/scripts';
 import { php } from './gulp/php';
 import { vend, wipeVend } from './gulp/vendors';
 import { wpreq } from './gulp/wpreq';
@@ -36,6 +37,6 @@ import { wpreq } from './gulp/wpreq';
 //export default gDev;
 
 /** Export All Imports as Tasks */
-export { vend, wipeVend, wpreq, php, fonts, graphics, css };
+export { vend, wipeVend, wpreq, php, fonts, graphics, css, jss };
 
 /** End of File */
