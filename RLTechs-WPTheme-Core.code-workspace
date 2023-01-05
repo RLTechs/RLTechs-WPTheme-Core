@@ -47,9 +47,13 @@
 			"fontawesome",
 			"fortawesome",
 			"gulpfile",
+			"phpcs",
 			"popperjs",
 			"potomo",
-			"stylelint"
+			"rltechs",
+			"stylelint",
+			"themecore",
+			"wpreq"
 		]
 	},
 	"extensions": {
