@@ -7,8 +7,9 @@
  * @copyright 2020-2023 RL Technologies LLC. All Rights Reserved.
  * @license
  *
- * @package RLTechs/ThemeCore
- * @version 1.0.0
+ * @package ThemeCore
+ * @version 0
+ * 0.0.1a
  */
 
  
