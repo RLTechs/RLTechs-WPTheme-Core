@@ -325,22 +325,6 @@ function popJs() {
 
 const vend = g.series(bsScss, bsJs, bsIco, bsIcoScss, faScss, faIco, popJs);
 
-function wipeVend() {
-	// TODO add console messages for each wipe section
-	// along with progress indicators?
-	const wipeVendFiles = [
-		`${sysPaths.srcPath}/scss/bootstrap`,
-		`${sysPaths.srcPath}/js/bootstrap.*`,
-		`${sysPaths.srcPath}/fonts/bsi/`,
-		`${sysPaths.srcPath}/scss/bootstrap-icons`,
-		`${sysPaths.srcPath}/scss/fontawesome`,
-		`${sysPaths.srcPath}/fonts/fa`,
-		`${sysPaths.srcPath}/js/popper.*`,
-	];
-
-	return del(wipeVendFiles);
-}
-
-export { vend, wipeVend };
+export { vend };
 
 /** EOF */
