@@ -24,7 +24,7 @@ export const ifProd = process.env.NODE_ENV === 'production';
 const rootPath = process.cwd();
 
 /** Define Node Path */
-const nPath = `${rootPath}/node_modules`
+const nPath = `${rootPath}/node_modules`;
 
 /** Define Gulp Path */
 const gPath = `${rootPath}/gulp`;
@@ -72,6 +72,11 @@ export const paths = {
 		src: `${srcPath}/images/**`,
 		dev: `${devPath}/${theme.slug}/assets/img`,
 		dist: `${distPath}/${theme.slug}/assets/img`,
+	},
+	jss: {
+		src: [`${srcPath}/js/**/*.js`, `!${srcPath}/js/**/_*.js`],
+		dev: `${devPath}/${theme.slug}/assets/js`,
+		dist: `${devPath}/${theme.slug}/assets/js`,
 	},
 	php: {
 		src: `${srcPath}/php/**`,
