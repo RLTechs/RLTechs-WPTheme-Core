@@ -59,7 +59,7 @@ export const paths = {
 		dist: `${distPath}/${theme.slug}/assets/css`,
 	},
 	fnt: {
-		src: `${srcPath}/fonts/**`,
+		src: `${srcPath}/fonts/**/*.{woff,woff2,ttf}`,
 		dev: `${devPath}/${theme.slug}/assets/fonts`,
 		dist: `${distPath}/${theme.slug}/assets/fonts`,
 	},

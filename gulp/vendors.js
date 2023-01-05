@@ -137,8 +137,8 @@ function bsIco() {
 		.on('data', function () {
 			nSrc += 1;
 		})
-		.pipe(changed(`${sysPaths.srcPath}/fonts/bsi/`))
-		.pipe(g.dest(`${sysPaths.srcPath}/fonts/bsi/`))
+		.pipe(changed(`${sysPaths.srcPath}/fonts`))
+		.pipe(g.dest(`${sysPaths.srcPath}/fonts`))
 		.on('data', function () {
 			nDes += 1;
 		})
@@ -250,9 +250,7 @@ function faIco() {
 		nDes = 0;
 
 	return g
-		.src(
-			`${sysPaths.nPath}/@fortawesome/fontawesome-free/webfonts/*.{woff,woff2}`
-		)
+		.src(`${sysPaths.nPath}/@fortawesome/fontawesome-free/webfonts/*.*`)
 		.pipe(
 			plumber(),
 			log(
@@ -264,8 +262,8 @@ function faIco() {
 		.on('data', function () {
 			nSrc += 1;
 		})
-		.pipe(changed(`${sysPaths.srcPath}/fonts/fa`))
-		.pipe(g.dest(`${sysPaths.srcPath}/fonts/fa`))
+		.pipe(changed(`${sysPaths.srcPath}/fonts`))
+		.pipe(g.dest(`${sysPaths.srcPath}/fonts`))
 		.on('data', function () {
 			nDes += 1;
 		})
