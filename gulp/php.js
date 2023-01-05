@@ -22,11 +22,11 @@ import changed from 'gulp-changed';
 import plumber from 'gulp-plumber';
 import print from 'gulp-print';
 
-function php(done) {
+export function gPhp() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * PHP Development:
@@ -70,4 +70,4 @@ function php(done) {
 		.pipe(plumber.stop());
 }
 
-export { php };
+//export { gPhp };
