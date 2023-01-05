@@ -32,11 +32,14 @@ import { reload, bsWatch, bsSync } from './gulp/bsync';
 /** Build Gulp Tasks */
 
 /** Export Tasks */
+const wbMain = wBuild;
+
 /** Default Export Task */
+export const gVend = series(wVend, vend);
 
-//export const gDev = series(php, php);
+export const gDev = series( wbMain, series(wpreq, php, jss, css, fonts, graphics), bsSync, bsWatch);
 
-//export default gDev;
+export default gDev;
 
 /** Export All Imports as Tasks */
 export {
