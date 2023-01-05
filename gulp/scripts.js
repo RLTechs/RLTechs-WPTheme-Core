@@ -19,6 +19,8 @@ import { paths, ifProd } from '../config/gulpConfig';
 import log from 'fancy-log';
 import c from 'ansi-colors';
 import include from 'gulp-include';
+import plumber from 'gulp-plumber';
+import print from 'gulp-print';
 import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
 import changed from 'gulp-changed';
