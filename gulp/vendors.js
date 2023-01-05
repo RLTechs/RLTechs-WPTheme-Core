@@ -94,8 +94,8 @@ function bsJs() {
 		.on('data', function () {
 			nSrc += 1;
 		})
-		.pipe(changed(`${sysPaths.srcPath}/js/library/bootstrap`))
-		.pipe(g.dest(`${sysPaths.srcPath}/js/library/bootstrap`))
+		.pipe(changed(`${sysPaths.srcPath}/js`))
+		.pipe(g.dest(`${sysPaths.srcPath}/js`))
 		.on('data', function () {
 			nDes += 1;
 		})
@@ -293,7 +293,7 @@ function popJs() {
 		nDes = 0;
 
 	return g
-		.src(`${sysPaths.nPath}/@popperjs/core/dist/esm/**`)
+		.src(`${sysPaths.nPath}/@popperjs/core/dist/cjs/popper.{js,js.map}`)
 		.pipe(
 			plumber(),
 			log(c.bold(c.cyan('PopperJS Files Copying To SRC Directory...')))
@@ -301,8 +301,8 @@ function popJs() {
 		.on('data', function () {
 			nSrc += 1;
 		})
-		.pipe(changed(`${sysPaths.srcPath}/js/library/popper`))
-		.pipe(g.dest(`${sysPaths.srcPath}/js/library/popper`))
+		.pipe(changed(`${sysPaths.srcPath}/js`))
+		.pipe(g.dest(`${sysPaths.srcPath}/js`))
 		.on('data', function () {
 			nDes += 1;
 		})
@@ -332,12 +332,12 @@ function wipeVend() {
 	// along with progress indicators?
 	const wipeVendFiles = [
 		`${sysPaths.srcPath}/scss/bootstrap`,
-		`${sysPaths.srcPath}/js/library/bootstrap`,
+		`${sysPaths.srcPath}/js/bootstrap.*`,
 		`${sysPaths.srcPath}/fonts/bsi/`,
 		`${sysPaths.srcPath}/scss/bootstrap-icons`,
 		`${sysPaths.srcPath}/scss/fontawesome`,
 		`${sysPaths.srcPath}/fonts/fa`,
-		`${sysPaths.srcPath}/js/library/popper`,
+		`${sysPaths.srcPath}/js/popper.*`,
 	];
 
 	return del(wipeVendFiles);
