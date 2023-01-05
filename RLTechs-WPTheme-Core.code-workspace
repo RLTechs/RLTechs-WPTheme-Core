@@ -54,7 +54,10 @@
 			"stylelint",
 			"themecore",
 			"wpreq"
-		]
+		],
+		"enabledCodeActions": true,
+		"name": "Erik-Roth",
+		"actionTypes": "TODO,FIXME,HACK,BUG,UNDONE,OPTION"
 	},
 	"extensions": {
 		"recommendations": [
@@ -70,7 +73,8 @@
 			"christian-kohler.npm-intellisense",
 			"natqe.reload",
 			"yogensia.searchwpdocs",
-			"streetsidesoftware.code-spell-checker"
+			"streetsidesoftware.code-spell-checker",
+			"tzachovadia.todo-list"
 		]
 	}
 }
