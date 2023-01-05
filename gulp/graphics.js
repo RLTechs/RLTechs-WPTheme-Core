@@ -22,11 +22,11 @@ import changed from 'gulp-changed';
 import plumber from 'gulp-plumber';
 import print from 'gulp-print';
 
-function icons(done) {
+function icons() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * Icon Development:
@@ -70,11 +70,11 @@ function icons(done) {
 		.pipe(plumber.stop());
 }
 
-function images(done) {
+function images() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * Image Development:
@@ -118,11 +118,11 @@ function images(done) {
 		.pipe(plumber.stop());
 }
 
-function svgs(done) {
+function svgs() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * SVGs Development:
@@ -166,6 +166,6 @@ function svgs(done) {
 		.pipe(plumber.stop());
 }
 
-const graphics = g.series( icons, images, svgs );
+export const gImgs = g.series( icons, images, svgs );
 
-export { graphics };
+/** EOF */

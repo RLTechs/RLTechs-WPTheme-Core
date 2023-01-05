@@ -22,11 +22,11 @@ import changed from 'gulp-changed';
 import plumber from 'gulp-plumber';
 import print from 'gulp-print';
 
-function fonts(done) {
+export function gFonts() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * Font Development:
@@ -70,4 +70,4 @@ function fonts(done) {
 		.pipe(plumber.stop());
 }
 
-export { fonts };
+/** EOF */

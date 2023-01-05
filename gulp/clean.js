@@ -38,10 +38,10 @@ function wVend() {
 	const dPaths = [
 		`${sysPaths.srcPath}/scss/bootstrap`,
 		`${sysPaths.srcPath}/js/bootstrap.*`,
-		`${sysPaths.srcPath}/fonts/bsi/`,
+		`${sysPaths.srcPath}/fonts/boot*.*`,
 		`${sysPaths.srcPath}/scss/bootstrap-icons`,
 		`${sysPaths.srcPath}/scss/fontawesome`,
-		`${sysPaths.srcPath}/fonts/fa`,
+		`${sysPaths.srcPath}/fonts/fa*.*`,
 		`${sysPaths.srcPath}/js/popper.*`,
 	];
 

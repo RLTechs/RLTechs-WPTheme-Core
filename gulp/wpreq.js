@@ -22,11 +22,11 @@ import changed from 'gulp-changed';
 import plumber from 'gulp-plumber';
 import print from 'gulp-print';
 
-function wpreq(done) {
+export function gReq() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * WP Required Files Development:
@@ -71,4 +71,4 @@ function wpreq(done) {
 		.pipe(plumber.stop());
 }
 
-export { wpreq };
+/** EOF */

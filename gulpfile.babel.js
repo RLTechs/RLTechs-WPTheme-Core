@@ -16,17 +16,17 @@
 /** Retrieve Directory Info */
 
 /** External Dependencies */
-import { parallel, series } from 'gulp';
+import * as g from 'gulp';
 
 /** Internal Dependencies */
 import { wBuild, wVend, cWpr, cCss, cJs } from './gulp/clean';
-import { css } from './gulp/styles';
-import { graphics } from './gulp/graphics';
-import { fonts } from './gulp/fonts';
-import { jss } from './gulp/scripts';
-import { php } from './gulp/php';
-import { vend } from './gulp/vendors';
-import { wpreq } from './gulp/wpreq';
+import { gCss } from './gulp/styles';
+import { gImgs } from './gulp/graphics';
+import { gFonts } from './gulp/fonts';
+import { gJs } from './gulp/scripts';
+import { gPhp } from './gulp/php';
+import { gVend } from './gulp/vendors';
+import { gReq } from './gulp/wpreq';
 import { reload, bsWatch, bsSync } from './gulp/bsync';
 
 /** Build Gulp Tasks */
@@ -35,21 +35,26 @@ import { reload, bsWatch, bsSync } from './gulp/bsync';
 const wbMain = wBuild;
 
 /** Default Export Task */
-export const gVend = series(wVend, vend);
+const gUpVend = g.series(wVend, gVend);
 
-export const gDev = series( wbMain, series(wpreq, php, jss, css, fonts, graphics), bsSync, bsWatch);
+const gDev = g.series(
+	wbMain,
+	g.series(gReq, gPhp, gJs, gCss, gFonts, gImgs),
+	bsSync,
+	bsWatch
+);
 
 export default gDev;
 
 /** Export All Imports as Tasks */
 export {
-	vend,
-	wpreq,
-	php,
-	fonts,
-	graphics,
-	css,
-	jss,
+	gVend,
+	gReq,
+	gPhp,
+	gFonts,
+	gImgs,
+	gCss,
+	gJs,
 	wBuild,
 	wVend,
 	cWpr,
@@ -58,6 +63,7 @@ export {
 	reload,
 	bsSync,
 	bsWatch,
+	gUpVend
 };
 
 /** End of File */

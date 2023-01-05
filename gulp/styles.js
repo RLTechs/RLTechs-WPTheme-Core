@@ -26,11 +26,11 @@ import gulpSass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 
 /** CSS */
-function css() {
+export function gCss() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * CSS Function:
@@ -74,6 +74,5 @@ function css() {
 		.pipe(plumber.stop());
 }
 
-export { css };
 
 /** EOF */

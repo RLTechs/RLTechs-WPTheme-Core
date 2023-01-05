@@ -26,11 +26,11 @@ import babel from 'gulp-babel';
 import changed from 'gulp-changed';
 
 /** JS */
-function jss() {
+export function gJs() {
 	/** If Production Then Do */
 	if (ifProd) {
 		/** Replace Default Theme Data With Custom */
-		return console.log('production'), done();
+		return console.log('production');
 	}
 	/**
 	 * JS Function:
@@ -81,6 +81,5 @@ function jss() {
 		.pipe(plumber.stop());
 }
 
-export { jss };
 
 /** EOF */

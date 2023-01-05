@@ -35,8 +35,8 @@ export const bsConf = {
 	open: true,
 	notify: true,
 	liveReload: true,
-	reloadDelay: 150,
-	https: false,
+	reloadDelay: 100,
+	https: false
 	//watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir']
 	//browser: [ 'safari', 'microsoft edge' ],
 }

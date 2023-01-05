@@ -323,8 +323,8 @@ function popJs() {
 		.pipe(plumber.stop());
 }
 
-const vend = g.series(bsScss, bsJs, bsIco, bsIcoScss, faScss, faIco, popJs);
+export const gVend = g.series(bsScss, bsJs, bsIco, bsIcoScss, faScss, faIco, popJs);
 
-export { vend };
+//export { vend };
 
 /** EOF */

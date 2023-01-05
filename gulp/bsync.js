@@ -19,41 +19,41 @@ import { paths, sysPaths, ifProd } from '../config/gulpConfig';
 import { theme, bsConf } from '../config/themeConfig';
 import { wBuild, wVend, cWpr, cCss, cJs } from '../gulp/clean';
 import browserSync from 'browser-sync';
-import { css } from '../gulp/styles';
-import { graphics } from '../gulp/graphics';
-import { fonts } from '../gulp/fonts';
-import { jss } from '../gulp/scripts';
-import { php } from '../gulp/php';
-import { wpreq } from '../gulp/wpreq';
+import { gCss } from '../gulp/styles';
+import { gImgs } from '../gulp/graphics';
+import { gFonts } from '../gulp/fonts';
+import { gJs } from '../gulp/scripts';
+import { gPhp } from '../gulp/php';
+import { gReq } from '../gulp/wpreq';
 
-const reload = done => {
-	browserSync.reload();
-	done();
-};
-
-const bsWatch = ( )=> {
-	g.watch(`${paths.wpr.dev}`, g.series( cWpr, wpreq, reload));
-	g.watch(`${paths.php.dev}`, g.series( php, reload));
-	g.watch(`${paths.css.dev}`, g.series( cCss, css, reload));
-	g.watch(`${paths.jss.dev}`, g.series( cJs, jss, reload));
-	g.watch(`${paths.fnt.dev}`, g.series( fonts, reload));
-	g.watch(`${paths.ico.dev}`, g.series( graphics, reload));
-	g.watch(`${paths.img.dev}`, g.series( graphics, reload));
-	g.watch(`${paths.svg.dev}`, g.series( graphics, reload));
-
-};
 
 /** BrowserSync */
-const bsSync = done => {
+const bsSync = (done) => {
 	browserSync.init({
 		proxy: bsConf.proxy,
 		open: bsConf.open,
-		//notify: bsConf.notify,
-		https: bsConf.https,
+		notify: bsConf.notify,
+		//https: bsConf.https,
 		//browser:
 		reloadDelay: bsConf.reloadDelay
 	});
 	done();
 };
 
-export { reload, bsWatch, bsSync };
+const bsWatch = ( ) => {
+	g.watch(`${paths.php.src}`, g.series(gPhp, reload));
+	g.watch(`${paths.fnt.src}`, g.series(gFonts, reload));
+	g.watch(`${paths.wpr.src}`, g.series(cWpr, gReq, reload));
+	g.watch(`${paths.css.src}`, g.series(cCss, gCss, reload));
+	g.watch(`${paths.jss.src}`, g.series(cJs, gJs, reload));
+	g.watch(`${paths.ico.src}`, g.series(gImgs, reload));
+	g.watch(`${paths.img.src}`, g.series(gImgs, reload));
+	g.watch(`${paths.svg.src}`, g.series(gImgs, reload));
+};
+
+const reload = (done) => {
+	browserSync.reload();
+	done();
+};
+
+export { bsSync, reload, bsWatch };
