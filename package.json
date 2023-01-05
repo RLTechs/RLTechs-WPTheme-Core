@@ -36,9 +36,11 @@
   },
   "homepage": "https://github.com/RLTechs/RLTechs-WPTheme-Core#readme",
   "scripts": {
-    "build": "",
-    "package": "cross-env NODE_ENV=production gulp php",
+    "build": "cross-env NODE_ENV=development gulp phgDev",
+    "package": "cross-env NODE_ENV=production gulp ?",
     "setup": "npm install",
+    "setupVend": "gulp gVend",
+    "updateVend": "gulp gUpVend",
     "tasks": "gulp --tasks",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
