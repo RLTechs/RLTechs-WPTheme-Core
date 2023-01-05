@@ -27,6 +27,7 @@ import { jss } from './gulp/scripts';
 import { php } from './gulp/php';
 import { vend } from './gulp/vendors';
 import { wpreq } from './gulp/wpreq';
+import { reload, bsWatch, bsSync } from './gulp/bsync';
 
 /** Build Gulp Tasks */
 
@@ -51,6 +52,9 @@ export {
 	cWpr,
 	cCss,
 	cJs,
+	reload,
+	bsSync,
+	bsWatch,
 };
 
 /** End of File */
