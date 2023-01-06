@@ -12,4 +12,5 @@
  * 0.0.1a
  */
 
+ namespace RLTechs\ThemeCore;
  
