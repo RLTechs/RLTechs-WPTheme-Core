@@ -1,2 +1,1 @@
 /** ThemeCore JS */
-// XRX
