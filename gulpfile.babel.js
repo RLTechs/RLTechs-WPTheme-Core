@@ -63,7 +63,8 @@ export {
 	reload,
 	bsSync,
 	bsWatch,
-	gUpVend
+	gUpVend,
+	gDev
 };
 
 /** End of File */
