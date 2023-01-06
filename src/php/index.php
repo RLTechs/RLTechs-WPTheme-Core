@@ -12,14 +12,29 @@
  * 0.0.1a
  */
 
+namespace RLTechs\ThemeCore;
+
 /**
  * Get header file
  * @since 1.0.0
  */
-//get_header(); // TODO add multiple types of Header files for selection in options
+// TODO add multiple types of Header files for selection in options ex: get_header(type)
+//get_header(); 
 ?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+
+    
+</head>
 
 <body>
 
 
 </body>
+
+</html>
