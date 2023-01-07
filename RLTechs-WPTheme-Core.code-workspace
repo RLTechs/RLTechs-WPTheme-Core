@@ -57,7 +57,9 @@
 		],
 		"enabledCodeActions": true,
 		"name": "Erik-Roth",
-		"actionTypes": "TODO,FIXME,HACK,BUG,UNDONE,OPTION"
+		"actionTypes": "TODO,FIXME,HACK,BUG,UNDONE,OPTION,IDEA",
+		"editor.minimap.scale": 3,
+		"editor.minimap.maxColumn": 150
 	},
 	"extensions": {
 		"recommendations": [
