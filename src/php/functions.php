@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Setup theme location path shortcuts
  * @since 1.0.0
  */
-require get_template_directory() . '/inc/tcore-paths.php';
+require get_template_directory() . '/func/tcore-paths.php';
 
 /**
  * Compatibility Version Check... These are the minimum versions
@@ -42,7 +42,7 @@ define( 'TCORE_MINIMUM_JPK_VERSION', '1.1'); // The Minimum Jetpack Version Supp
  */
 // TODO Add WooCommerce and Jetpack checks
 if ( version_compare( $GLOBALS['wp_version'], TCORE_MINIMUM_WP_VERSION, '<' ) || version_compare( phpversion(), TCORE_MINIMUM_PHP_VERSION, '<' ) ) {
-	require TCORE_TDIR . '/inc/tcore-reqs.php';
+	require TCORE_TDIR . '/func/tcore-reqs.php';
 	return;
 };
 
@@ -119,3 +119,13 @@ endif;
 
 add_action( 'after_setup', 'tcore_theme_setup' );
 
+
+/**
+ * Enqueue required theme scripts and functions.
+ * 01. Sidebars and Widgets
+ * 02. CSS Files
+ * 03. Javascript Files
+ * @since 1.0.0
+ */
+
+ require TCORE_FUNC_DIR . "/tcore-scripts.php";
