@@ -127,5 +127,5 @@ add_action( 'after_setup', 'tcore_theme_setup' );
  * 03. Javascript Files
  * @since 1.0.0
  */
-
- require TCORE_FUNC_DIR . "/tcore-scripts.php";
+require TCORE_FUNC_DIR . "/tcore-styles.php";				// 02
+require TCORE_FUNC_DIR . "/tcore-scripts.php";				// 03
