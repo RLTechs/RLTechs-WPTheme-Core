@@ -33,14 +33,32 @@ namespace RLTechs\ThemeCore;
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("text-bg-dark"); ?>>
 
   <?php wp_body_open(); ?>
 
   
-  <div id="page" class="site">
+  <div id="page" class="site text-bg-primary">
 
     <header id="masthead" class="site-header">
+
+    <div class="fixed-top bg-light">
+
+    <nav id="nav-main" class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+
+
+    </div>
+
+
+
+    </nav>
+
+
+
+    </div>
 
 
 
@@ -50,7 +68,40 @@ namespace RLTechs\ThemeCore;
     
       <div id="primary" class="content-area">
 
-A
+        <!-- Hook to add something nice -->
+        <?php //bs_after_primary(); ?>
+
+        <div class="row">
+          <!-- TODO need theme option for single or dual left sidebar -->
+          <?php get_sidebar(); ?>
+          <div class="col">
+
+            <main id="main" class="site-main">
+
+                <!-- Header -->
+            <div class="py-3 py-md-5 text-center">
+              <h1 class="display-1"><?php bloginfo('name'); ?></h1>
+              <p class="lead"><?php bloginfo('description'); ?></p>
+            </div>
+
+
+
+            
+            </main>
+
+
+
+
+
+          </div><!-- #col -->
+
+          <!-- TODO need theme option for single or dual right sidebar -->
+          <?php get_sidebar(); ?>
+
+
+        </div><!-- #row -->
+
+
 
 
       </div>
@@ -65,8 +116,11 @@ A
 
 
 
-    </footer>
-  </div>
+    </footer><!-- #footer -->
+    <!-- To top button -->
+    <a href="#" class="btn btn-primary shadow top-button position-fixed zi-1020"><i class="fa-solid fa-chevron-up"></i>
+    <span class="visually-hidden-focusable">To top</span></a>
+  </div><!-- #page -->
 
   <?php wp_footer(); ?>
 
