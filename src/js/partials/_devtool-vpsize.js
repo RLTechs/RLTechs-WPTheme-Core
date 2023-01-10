@@ -11,7 +11,7 @@ Object.assign(el.style, {
   background: "red",
   color: "white",
   padding: "5px",
-  fontSize: "11px",
+  fontSize: "12px",
   opacity: 0.7
 });
 function updateOutput() {
