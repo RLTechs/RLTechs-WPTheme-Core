@@ -129,3 +129,20 @@ add_action( 'after_setup', 'tcore_theme_setup' );
  */
 require TCORE_FUNC_DIR . "/tcore-styles.php";				// 02
 require TCORE_FUNC_DIR . "/tcore-scripts.php";				// 03
+
+
+
+if( current_user_can('administrator') ) {
+	echo 'This will display for WordPress admins only.';
+   };
+
+ 
+/**   if ( is_user_logged_in() ) {
+*	echo 'Welcome, logged in user. <a href="'.wp_logout_url().'">Click here to logout</a>.';
+*   } else {
+*	echo 'Please login by <a href="'.wp_login_url().'">clicking here</a>.';
+*   };*/ 
+
+   if( current_user_can('manage_options') ) {
+	echo 'This user can manage WordPress options. (Settings Page)';
+   };
