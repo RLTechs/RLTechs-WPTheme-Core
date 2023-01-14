@@ -8,8 +8,8 @@
  * @license
  *
  * @package ThemeCore
- * @version 0
- * 0.0.1a
+ * @version 1.0.0
+ *
  */
-
-namespace RLTechs\ThemeCore;
+?>
+<h1>Themecore Options</h1>

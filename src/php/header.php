@@ -11,5 +11,5 @@
  * @version 0
  * 0.0.1a
  */
-
- namespace RLTechs\ThemeCore;
+//wp_head(); 
+?>

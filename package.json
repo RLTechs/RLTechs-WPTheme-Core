@@ -36,13 +36,14 @@
   },
   "homepage": "https://github.com/RLTechs/RLTechs-WPTheme-Core#readme",
   "scripts": {
-    "build": "cross-env NODE_ENV=development gulp gDev",
+    "build": "gulp gDev",
     "package": "cross-env NODE_ENV=production gulp ?",
     "setup": "npm install",
     "setupVend": "gulp gVend",
     "updateVend": "gulp gUpVend",
     "tasks": "gulp --tasks",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bWipe": "gulp wBuild"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",

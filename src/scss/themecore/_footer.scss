@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+
+// Make the footer stick to the bottom
+html,
+body,
+#page {
+  height: 100%;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+}
+
+.vtxt {
+  font-size: 0.75rem;
+  margin-right: 0.85rem !important;
+  bottom: 0;
+  position: fixed;
+  right: 0;
+}
+
+.cpyv {
+  font-size: 0.75rem;
+  margin-left: 0.85rem !important;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  //font-weight: 600;
+  //padding-bottom: 0.5rem;
+  //padding-top: 0.8rem;
+}

@@ -114,7 +114,15 @@ namespace RLTechs\ThemeCore;
 
     <footer>
 
+      <div id="copyright" class="bg-light text-muted border-top py-2 text-center">
+        <div class="container">
+          <small>&copy;&nbsp;<?php echo Date('Y'); ?> - <?php bloginfo('name'); ?></small>
 
+          <div id="cpVend" class="cpyv text-start"></div>
+          <div id="verText" class="vtxt text-end"></div> 
+          
+        </div>
+      </div>
 
     </footer><!-- #footer -->
     <!-- To top button -->

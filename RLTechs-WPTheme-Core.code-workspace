@@ -42,7 +42,7 @@
 		"searchwpdocs.showOnSideTab": false,
 		"terminal.integrated.fontSize": 12,
 		"editor.fontSize": 14,
-		"window.zoomLevel": 1,
+		"window.zoomLevel": 0,
 		"cSpell.words": [
 			"fontawesome",
 			"fortawesome",
@@ -52,6 +52,7 @@
 			"potomo",
 			"rltechs",
 			"stylelint",
+			"tcore",
 			"themecore",
 			"wpreq"
 		],
