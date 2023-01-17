@@ -8,18 +8,16 @@
  * @license
  *
  * @package ThemeCore
- * @version 0
- * 0.0.1a
+ * @version 1.0.0
+ * 
  */
-
-namespace RLTechs\ThemeCore;
 
 /**
  * Get header file
  * @since 1.0.0
  */
 // TODO add multiple types of Header files for selection in options ex: get_header(type)
-//get_header(); 
+//get_header($header-type); 
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -45,6 +43,8 @@ namespace RLTechs\ThemeCore;
     <div class="fixed-top bg-light">
 
     <nav id="nav-main" class="navbar navbar-expand-lg">
+
+    AAA
 
     <div class="container">
 
@@ -83,6 +83,16 @@ namespace RLTechs\ThemeCore;
               <h1 class="display-1"><?php bloginfo('name'); ?></h1>
               <p class="lead"><?php bloginfo('description'); ?></p>
             </div>
+
+            <!-- Sticky Post -->
+              <!-- Featured Image-->
+                <!-- Featured -->
+              <!-- Title -->
+              <!-- Meta -->
+              <!-- Excerpt & Read more -->
+              <!-- Tags -->
+
+
 
 
 

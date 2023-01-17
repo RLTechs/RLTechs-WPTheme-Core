@@ -12,6 +12,4 @@
  *
  */
 ?>
-<h1>Themecore Options</h1>
-<h3>General ThemeCore Theme Options</h3>
-<p>Customize the ThemeCore basic theme layout options.</p>
+<h1>Themecore Social Options</h1>
