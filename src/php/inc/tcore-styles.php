@@ -36,7 +36,21 @@ function tcore_styles() {
 add_action( 'wp_enqueue_scripts', 'tcore_styles' );
 
 function tcore_admin_styles() {
-    //
+    /** Register Stylesheets */
+    $tcore_admin_main_stylesheet = TCORE_AURI . '/css/themecore-admin.css';
+	wp_register_style( 'tcore-admin-main', $tcore_admin_main_stylesheet, array(), null);
+
+    $tcore_admin_bsi_stylesheet = TCORE_AURI . '/css/bs-icons.css';
+	wp_register_style( 'tcore-admin-bsi', $tcore_admin_bsi_stylesheet, array(), null);
+
+    $tcore_admin_fa_stylesheet = TCORE_AURI . '/css/fontawesome.css';
+	wp_register_style( 'tcore-admin-fa', $tcore_admin_fa_stylesheet, array(), null);
+
+    /** Enqueue Files IN ORDER */
+    wp_enqueue_style('tcore-admin-main');
+    wp_enqueue_style('tcore-admin-bsi');
+    wp_enqueue_style('tcore-admin-fa');
+
 }
 
 add_action( 'admin_enqueue_scripts', 'tcore_admin_styles' );
