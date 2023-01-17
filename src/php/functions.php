@@ -152,7 +152,7 @@ add_action( 'after_setup', 'tcore_theme_setup' );
 require TCORE_INC_DIR . "tcore-styles.php";					// 02
 require TCORE_INC_DIR . "tcore-scripts.php";				// 03
 
-require TCORE_INC_DIR . 'tcore-admin.php';					// 05
+require TCORE_INC_DIR . 'tcore-settings.php';					// 05
 
 
 
